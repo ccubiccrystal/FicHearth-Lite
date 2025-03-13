@@ -3,9 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import api from "../api";
-import Post from "./parts/Post";
 
-export default function Home({handleLogout, user}) {
+export default function Liked({handleLogout, user}) {
 
     const navigate = useNavigate();
     const { page } = useParams();
@@ -17,11 +16,11 @@ export default function Home({handleLogout, user}) {
     let content;
 
     const fetchPosts = async (page) => {
-    	const response = await api.get(`/api/posts?page=${page}&limit=10`);
+    	const response = await api.get(`/api/likedposts?page=${page}&limit=10`);
     	setPosts(response.data.posts);
 	if (response.data.posts.length === 0) {
 	    const backPage = page - 1;
-	    navigate(`/posts/${backPage}`);
+	    navigate(`/liked/${backPage}`);
 	}
 	setLoading(false);
     };
@@ -41,7 +40,7 @@ export default function Home({handleLogout, user}) {
     }, [page]);
 
     const goToPage = (newPage) => {
-    	navigate(`/posts/${newPage}`);
+    	navigate(`/liked/${newPage}`);
     };
 
     const logout = async () => {
@@ -98,7 +97,25 @@ export default function Home({handleLogout, user}) {
       
       <div>
         {posts.map((post) => (
-          <Post user={user} post={post} like={like} deletePost={deletePost} editPost={editPost} />
+          <div className="post">
+	    <div className="userbox">
+		<Link to={`/auth/profile/${post.username}`}><img src={post.avatar} /></Link>
+	        <h2>{post.username}</h2>	    
+	    </div>
+            <div className="postcontent">
+		{post.title ? <h2>{post.title}</h2> : ""}
+		<p dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, "<br>") }}></p>
+	      <h6>{post.like_count} likes --- {post.created_at}</h6>
+	    </div>
+	    <div className="tagbox">
+	    </div>
+	    <div className="widgets">
+		<button type="button" className="widgetbutton"><i className="fa-solid fa-comment"></i></button>
+		<button type="button" className="widgetbutton"><i className="fa-solid fa-repeat"></i></button>
+		<button type="button" className="widgetbutton" onClick={() => like(post.id)}><i className="fa-solid fa-heart" style={post.has_liked ? {color:"red"} : {color:"white"}}></i></button>
+	    </div>
+		{user.username === post.username ? <div className="deledit"><button className="widgetbutton" onClick={() => deletePost(post.id, user.username)}><i className="fa-solid fa-trash"></i></button><br/><button className="widgetbutton" onClick={() => editPost(post.id)}><i className="fa-solid fa-pen"></i></button></div> : <div></div>}
+          </div>
         ))}
       </div>
       <button id="prev" onClick={() => goToPage(Number(page) - 1)} disabled={page <= 1}>
@@ -154,7 +171,7 @@ export default function Home({handleLogout, user}) {
         <img src={user?.avatar} className="navicon" id="profbutt"/>
         <div className="profdrop">
           <Link to={`/auth/profile/${user?.username}`}>Profile</Link>
-          <Link to="/liked/1">Likes</Link>
+          <a href="https://www.tumblr.com/dashboard">Likes</a>
           <Link to="/profile/edit">Edit</Link>
         </div>
 	<p className="navtext">{user?.username}</p>

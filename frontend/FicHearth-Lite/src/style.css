@@ -9,13 +9,37 @@ h1 {
   font-size: 1.5vw;
 }
 
+textarea {
+  background-color: rgb(127, 127, 191);
+  color: white;
+  font-size: 0.9vw;
+  border-radius: 1vw;
+  resize: none;
+  outline: none;
+  padding: 0.6vw;
+  margin-top: 0.4vw;
+  margin-bottom: 0.4vw;
+  width: 55.5vw;
+}
+
+textarea::placeholder {
+  color: white;
+}
+
 #wrapper {
   position: relative;
   top: 0vw;
   left: 0vw;
   margin-top: -1vw;
   margin-left: -1vw;
-  min-height: 90vh;
+  min-height: 96vh;
+}
+
+#collect {
+  overflow-y: auto;
+  position: absolute;
+  width: 100vw;
+  height: 94vh;
 }
 
 #icon {
@@ -48,7 +72,7 @@ h1 {
   left: 0vw;
   top: 0vh;
   width: 100.1vw;
-  height: 4.2vw;
+  height: 3.2vw;
   background-color: cornflowerblue;
 }
 
@@ -57,7 +81,7 @@ h1 {
   position: absolute;
   left: 3vw;
   top: 10vw;
-  width: 63vw;
+  width: 68vw;
   height: auto;
   padding: 1vw;
   background-color: rgba(240, 248, 255, 0.5);
@@ -79,17 +103,17 @@ h1 {
   z-index: 1;
   padding-top: 1vw;
   padding-bottom: 1vw;
-  width: 27vw;
+  width: 22vw;
   background-color: rgba(240, 248, 255, 0.5);
   border-radius: 1.5vw;
 }
 
 #sidebar-outline {
-  z-index: 11;
-  position: absolute;
-  left: 69vw;
+  z-index: 9;
+  position: relative;
+  left: 75vw;
   top: 5vw;
-  width: 27vw;
+  width: 22vw;
   padding: 0.5vw;
   border-radius: 2vw;
   border-style: dashed;
@@ -97,12 +121,85 @@ h1 {
   border-width: 0.35vw;
 }
 
+#newusers {
+  z-index: 1;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  width: 22vw; 
+  background-color: rgba(240, 248, 255, 0.5);
+  border-radius: 1.5vw;
+}
+
+#newusers-outline {
+  z-index: 9;
+  position: relative;
+  left: 75vw;
+  top: 7vw;
+  width: 22vw;
+  padding: 0.5vw;
+  border-radius: 2vw;
+  border-style: dashed;
+  border-color: white;
+  border-width: 0.35vw;
+}
+
+
 #footer {
   z-index: 1;
   width: 98vw;
-  height: 4vw;
+  height: 2vw;
   background-color: cornflowerblue;
   border-radius: 1.5vw;
+}
+
+#next {
+  float: right;
+  background-color: rgb(86, 86, 150);
+  border: none;
+  border-radius: 0.3vw;
+  padding: 0.3vw 0.7vw 0.3vw 0.7vw;
+  color: white;
+  font-size: 1.5vw;
+}
+
+#next:hover {
+  background-color: midnightblue;
+}
+
+
+#prev {
+  background-color: rgb(86, 86, 150);
+  border: none;
+  border-radius: 0.3vw;
+  padding: 0.3vw 0.7vw 0.3vw 0.7vw;
+  color: white;
+  font-size: 1.5vw;
+}
+
+#prev:hover {
+  background-color: midnightblue;
+}
+
+#contentinput {
+  width: 30vw;
+  height: 11vw;
+  display: block;
+  line-height: 1.2;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+#commentbutton {
+  background-color: rgb(86, 86, 150);
+  border: none;
+  color: white;
+  font-size: 1vw;
+  position: absolute;
+  right: 1vw;
+  bottom: 0vw;
+  width: 4vw;
+  height: 2vw;
+  border-radius: 0.7vw;
 }
 
 .sb-box {
@@ -112,7 +209,7 @@ h1 {
   margin-left: 2vw;
   margin-bottom: 2vw;
   padding: 0.5vw 0vw 0.5vw 0.75vw;
-  width: 22vw;
+  width: 18vw;
   border-radius: 1vw;
 }
 
@@ -122,22 +219,192 @@ h1 {
   text-align: center;
 }
 
+.sb-avatar {
+  width: 10vw;
+  position:relative;
+  left: 20%;
+}
+
+.sb-user-mini {
+  margin-bottom: 1vw;
+  margin-left: 1vw;
+}
+
+.sb-ava-mini {
+  width: 3vw;
+}
+
+.sb-un-mini {
+  position: relative;
+  top: -1vw;
+  left: 1vw;	
+}
+
 .post {
-  z-index: 2;
+  z-index: 20;
   background-color: rgb(86, 86, 150);
   margin-top: 2vw;
   margin-left: 2vw;
   margin-bottom: 2vw;
-  width: 56vw;
+  width: 60vw;
   border-radius: 1.5vw;
+  position: relative;
+  display: flex;
+  padding: 0.1vw 1vw 0.1vw 1vw;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
 }
 
-.navbutt {
-  font-size: 2vw;
+.userbox {
+  position:relative;
+  background-color: rgb(70, 70, 134);
+  border-radius: 1vw;
+  top: 0.7vw;
+  left: -0.3vw;
+  width: 10vw;
+  height: 12vw;
+  text-align: center;
+  margin-right: 0.5vw;
+}
+
+.userbox h2 {
+  font-size: 1vw;
+  position: relative;
+  top: -0.5vw;
+  margin-bottom: 0vw;
+}
+
+.userbox img {
+  width: 8.5vw;
+  margin-top: 0.5vw;
+}
+
+.postcontent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5vw;
+  width: 55%;
+  overflow-wrap: break-word;
+}
+
+.content {
+  flex-grow: 1.4vw;
+  margin-bottom: 1.4vw;
+}
+
+.postcontent h6 {
+  position: absolute;
+  margin-top: auto;
+  bottom: -0.8vw;
+  right: 0;
+}
+
+.tagbox {
+  position: absolute;
+  background-color: rgb(112, 112, 176);
+  width: 15vw;
+  height: 10vw;
+  left: 45vw;
+  top: 1vw;
+  border-radius: 1vw;
+}
+
+.comment {
+  z-index: 19;
+  background-color: rgb(112, 112, 176);
+  top: -2vw;
+  left: 1vw;
+  margin-left: 2vw;
+  width: 57vw;
+  border-radius: 1.5vw;
+  position: relative;
+  display: flex;
+  padding: 0.1vw 1vw 0.1vw 1vw;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+}
+
+.cuserbox {
+  position:relative;
+  background-color: rgb(86, 86, 150);
+  border-radius: 1vw;
+  top: 0.7vw;
+  left: -0.3vw;
+  width: 8.5vw;
+  height: 10vw;
+  text-align: center;
+  margin-right: 0.5vw;
+}
+
+.cuserbox h2 {
+  font-size: 1vw;
+  position: relative;
+  top: -0.5vw;
+  margin-bottom: 0vw;
+}
+
+.cuserbox img {
+  width: 7vw;
+  margin-top: 0.5vw;
+}
+
+.commentcontent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vw;
+  width: 55%;
+  overflow-wrap: break-word;
+}
+
+.commentcontent h6 {
+  position: absolute;
+  margin-top: auto;
+  bottom: -0.8vw;
+  right: 0;
+}
+
+.deledit {
+  position: absolute;
+  background-color: rgb(70, 70, 134);
+  width: 2.7vw;
+  height: 4.9vw;
+  right: -2vw;
+  top: 2vw;
+  border-radius: 0.7vw;
+  font-size: 1vw;
+}
+
+.newcomment {
+  
+}
+
+.newcommentcontent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vw;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.navtext {
+  font-size: 1.2vw;
   float: right;
   color: white;
   margin-top: 0.6vw;
-  margin-right: 1vw;
+  margin-left: -1vw;
+  margin-right: 0vw;
+  border: none;
+  background-color: transparent;
+  padding: 0.6vw;
+}
+
+.navbutt {
+  font-size: 1.5vw;
+  float: right;
+  color: white;
+  margin-top: 0.5vw;
+  margin-right: 0.5vw;
   border: none;
   background-color: transparent;
   cursor:pointer;
@@ -149,12 +416,56 @@ h1 {
   background-color: midnightblue;
 }
 
+.navicon {
+  float: right;
+  color: white;
+  margin-top: 0.2vw;
+  margin-right: 0.2vw;
+  border: none;
+  background-color: transparent;
+  cursor:pointer;
+  padding: 0.6vw;
+  width: 2.3vw;
+  border-radius: 3vw;
+}
+
+.navicon:hover {
+  border-radius: 3vw;
+  background-color: midnightblue;
+}
+
+.widgets {
+  position: absolute;
+  background-color: rgb(70, 70, 134);
+  height: 2.5vw;
+  width: 8vw;
+  top: -1.2vw;
+  right: 1vw;
+  border-radius: 0.5vw;
+}
+
+.widgetbutton {
+  font-size: 1vw;
+  color: white;
+  margin-top: 0.1vw;
+  margin-left: 0.3vw;
+  border: none;
+  background-color: transparent;
+  cursor:pointer;
+  padding: 0.6vw;
+}
+
+.widgetbutton:hover {
+  border-radius: 1vw;
+  background-color: midnightblue;
+}
+
 .profdrop {
     display: none;
     position: absolute;
     background-color: midnightblue;
-    left: 73vw;
-    top: 4vw;
+    left: 81vw;
+    top: 3.2vw;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 100;
@@ -173,5 +484,28 @@ h1 {
 #profbutt:hover + .profdrop {display: inherit;}
 .profdrop:hover {display: inherit;}
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius:5px;
+  display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 
