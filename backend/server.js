@@ -45,13 +45,7 @@ app.use(cors({
 app.use(limiter);
 
 const router = express.Router();
-const pool = new Pool({ 
-	connectionString: process.env.DATABASE_URL,
-	user: "web_anon",
-	host: "localhost",
-	database: "fichearth",
-	port: 5432,
-});
+
 
 app.use("/auth", authRoutes);
 app.use("/api", generalRoutes);
