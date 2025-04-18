@@ -13,11 +13,11 @@ export default function Login({ setIsAuthenticated }) {
         try {
             const response = await api.post("/auth/login", { username, password });
 	    if (response.status === 200) {
-		setIsAuthenticated(true);
-		console.log(response);
-		localStorage.setItem("accessToken", response.data.accessToken);
-		//localStorage.setItem("user", response.data.id);
-		navigate("/");
+			setIsAuthenticated(true);
+			console.log(response);
+			localStorage.setItem("accessToken", response.data.accessToken);
+			//localStorage.setItem("user", response.data.id);
+			navigate("/");
 	    }
 	} catch (error) {
 	    console.error("Login failed", error);
@@ -31,23 +31,48 @@ export default function Login({ setIsAuthenticated }) {
 
     return (
         <div>
-            <h1>Login Page</h1>
-	    <form onSubmit={handleSubmit}>
-		<input
-		    type="text"
-		    placeholder="Username"
-		    value={username}
-		    onChange={(e) => setUsername(e.target.value)}
-		/>
-		<input
-		    type="password"
-		    placeholder="Password"
-		    value={password}
-		    onChange={(e) => setPassword(e.target.value)}
-		/>
-                <button type="submit">Login</button>
-	    </form>
-	    <button onClick={goRegister}>Sign Up</button>
+			<div id="navbar">
+				<h1 class="title">-= Login =-</h1>
+			</div>
+
+			<div class="logreg">
+				<div>
+					<form onSubmit={handleSubmit}>
+						<input
+							class="username"
+							type="text"
+							placeholder="Username"
+							value={username}
+							onChange={(e) => setUsername(e.target.value)}
+						/>
+						<input
+							class="password"
+							type="password"
+							placeholder="Password"
+							value={password}
+							onChange={(e) => setPassword(e.target.value)}
+						/>
+						<button class="subbutt" type="submit">Login</button>
+					</form>
+					<button id="switchlogreg" onClick={goRegister}>Sign Up</button>
+				</div>
+			</div>
+
+			
+			<div id="sidebar-outline">
+                    
+				<div id="sidebar">
+					<div id="info" className="sb-box">
+					<h1 style={{color:"white"}}>-= Instance Info =-</h1>
+					<p>(will eventually fill with instance info automatically from the database)</p>
+				</div>
+					
+				<div id="rules" className="sb-box">
+					<h1 style={{color:"white"}}>-= Rules =-</h1>
+					</div>
+				</div>
+
+			</div>
         </div>
     );
 }

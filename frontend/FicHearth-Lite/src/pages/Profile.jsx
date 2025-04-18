@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import api from "../api";
+import Post from "./parts/Post";
+import Navbar from "./parts/Navbar";
 
 export default function Profile({handleLogout, user}) {
 
@@ -14,47 +16,63 @@ export default function Profile({handleLogout, user}) {
     const { page } = useParams();
     const [usePage, setUsePage] = useState(1);
     const [posts, setPosts] = useState("");
-    const [loading, setLoading] = useState(true);
+    const [loadingPosts, setLoadingPosts] = useState(true);
+    const [loadingUser, setLoadingUser] = useState(true);
+        const [notifs, setNotifs] = useState("");
+        const [unread, setUnread] = useState("");
     
     const fetchPosts = async (currentPage) => {
     	const response = await api.get(`/api/user/posts?page=${currentPage}&limit=10&username=${username}`);
     	setPosts(response.data.posts);
-	console.log(response.data.posts);
-	if (response.data.posts.length === 0 && currentPage > 1) {
-	    setUsePage(currentPage-1);
-	    navigate(`/auth/profile/${username}/${usePage}`);
-	}
-	console.log(user?.avatar);
-	setLoading(false);
+        console.log(response.data.posts);
+        if (response.data.posts.length === 0 && currentPage > 1) {
+            setUsePage(currentPage-1);
+            navigate(`/profile/${username}/${usePage}`);
+        }
+        console.log(user?.avatar);
+        setLoadingPosts(false);
     };
 
 
     useEffect(() => {
-	async function loadUserData(setUsePage) {
-	    try {
-		const loadUser = await api.get(`/auth/profile/${username}`);
-		setProfileUser(loadUser.data.user);
-		console.log("has gone here");
-		setUsePage(1);
-		fetchPosts(1);
-	    } catch (err) {
-		console.error("Error fetching user data: ", err);
-	    }
-	}
-	loadUserData(setUsePage);
+        let ignore = false;
+
+        async function loadUserData(setUsePage) {
+            try {
+                const loadUser = await api.get(`/auth/profile/${username}`);
+                console.log("FOLLOWERS: " + !loadUser.data.user.followers);
+                if (!ignore) {
+                    setProfileUser(loadUser.data.user);
+                    console.log("has gone here");
+                    setUsePage(1);
+                    setLoadingUser(false);
+                }
+            } catch (err) {
+                console.error("Error fetching user data: ", err);
+            }
+        }
+
+        loadUserData(setUsePage);
+
+        return () => {
+            ignore = true;
+        }
     }, [username]);
 
     useEffect(() => {
-	fetchPosts(usePage);
+	    fetchPosts(usePage);
     }, [usePage]);
 
 
     const goToPage = (newPage) => {
-    	navigate(`/auth/profile/${username}/${newPage}`);
-	setUsePage(newPage);
+        if (newPage != usePage) {
+            setUsePage(newPage);
+            navigate(`/profile/${username}/${newPage}`);
+        }
     };
 
 
+	// Handles logout. Should probably be moved to App.
     const logout = async () => {
     	try {
 	    await handleLogout();
@@ -65,11 +83,44 @@ export default function Profile({handleLogout, user}) {
 	}
     }
 
-    if (loading) {
-	return <div>loading...</div>
+    // Handles post like. Should be moved to /parts/Post.
+    const like = async (post_id, author_id) => {
+      try {
+          const result = await api.post("/api/like", { post_id, author_id });
+          fetchPosts(page);
+      } catch (err) {
+          console.error("Failed to like post ", err);
+      }
+  }
+
+    // Handles post delete. Should be moved to /parts/Post.
+    const deletePost = async (post_id, post_author) => {
+	try {
+	    const result = await api.put("/api/deletepost", { post_id, post_author });
+	    fetchPosts(page);
+	} catch (err) {
+	    console.error("Failed to delete post ", err);
+	}
     }
 
-    console.log("... and stops loading");
+    const editPost = (post_id) => {
+	    navigate(`/post/edit/${post_id}`);
+    }
+
+    const follow = async () => {
+        try {
+            const user_id = profileUser.id;
+            const result = await api.post("/api/follow", { user_id });
+            navigate(0);
+        } catch (err) {
+            console.error("Failed to follow/unfollow ", err);
+        }
+    }
+
+	// Handles page loading so that things don't try to load before they've arrived from the backend.
+    if (loadingPosts || loadingUser) {
+	    return <div>loading...</div>
+    }
 
     return (
 
@@ -86,22 +137,8 @@ export default function Profile({handleLogout, user}) {
       
       <div>
         {posts.map((post) => (
-          <div className="post">
-	    <div className="userbox">
-		<Link to={`/auth/profile/${post.username}`}><img src={post.avatar} /></Link>
-	        <h2>{post.username}</h2>	    
-	    </div>
-            <div className="postcontent">
-	      <div className="content"><p>{post.content}</p></div>
-	      <h6>{post.like_count} likes --- {post.created_at}</h6>
-	    </div>
-	    <div className="widgets">
-		<button type="button" className="widgetbutton"><i className="fa-solid fa-comment"></i></button>
-		<button type="button" className="widgetbutton"><i className="fa-solid fa-repeat"></i></button>
-		<button type="button" className="widgetbutton" onClick={() => like(post.id)}><i className="fa-solid fa-heart"></i></button>
-	    </div>
-          </div>
-        ))}
+                  <Post user={user} post={post} like={like} deletePost={deletePost} editPost={editPost} limited={true} />
+                ))}
       </div>
       <button id="prev" onClick={() => goToPage(Number(usePage) - 1)} disabled={usePage <= 1}>
         <i className="fa-solid fa-arrow-left"></i>
@@ -116,21 +153,19 @@ export default function Profile({handleLogout, user}) {
       <div id="sidebar">
       
         <div id="announcements" className="sb-box">
-          <h1 style={{color:"white"}}>-= {username} =-</h1>
-	  <img src={profileUser.avatar} className="sb-avatar" />
+          <h1>-= {username} =-</h1>
+	  <img src={profileUser.avatar ? profileUser.avatar : "/default.webp"} className="sb-avatar" />
+      {username === user.username ? <i></i> : (!profileUser.is_following) ? <button class="followbutt" onClick={follow}><b>Follow</b></button> : <button class="ufollowbutt" onClick={follow}><b>Unfollow</b></button>}
+      <h2>=- Followers: {profileUser.followers.length} =-</h2>
 	  <p></p>
         </div>
         
         <div id="rules" className="sb-box">
-          <h1 style={{color:"white"}}>-= About =-</h1>
-	  <h2>Bio:</h2>
-	  <p>{profileUser.bio}</p>
-	  <h2>Pronouns:</h2>
-	  <p>{profileUser.pronouns}</p>
-	  <h2>-----</h2>
-	  <p>{profileUser.field1}</p>
-	  <h2>-----</h2>
-	  <p>{profileUser.field2}</p>
+          <h1>-= About =-</h1>
+    {profileUser.bio ? <div><h2>Bio:</h2><p dangerouslySetInnerHTML={{ __html: profileUser.bio.replace(/\n/g, "<br>") }}></p></div> : <i></i>}
+	  {profileUser.aliases ? <div><h2>Aliases:</h2><p dangerouslySetInnerHTML={{ __html: profileUser.aliases.replace(/\n/g, "<br>") }}></p></div> : <i></i>}
+	  {profileUser.field1 ? <div><h2>-----</h2><p dangerouslySetInnerHTML={{ __html: profileUser.field1.replace(/\n/g, "<br>") }}></p></div> : <i></i>}
+	  {profileUser.field2 ? <div><h2>-----</h2><p dangerouslySetInnerHTML={{ __html: profileUser.field2.replace(/\n/g, "<br>") }}></p></div> : <i></i>}
         </div>
         
       </div>
@@ -140,33 +175,9 @@ export default function Profile({handleLogout, user}) {
 
       </div>
       
-      <div id="navbar">
+     <Navbar user={user} logout={logout} notifs={notifs} unread={unread} setUnread={setUnread} />
       
-        <button type="button" className="navbutt" onClick={logout}><i className="fa-solid fa-right-to-bracket"></i></button>
-        <a  href="https://www.tumblr.com/dashboard"><button type="button" className="navbutt"><i className="fa-solid fa-gear"></i></button></a>
-        <a  href="https://www.tumblr.com/dashboard"><button type="button" className="navbutt"><i className="fa-solid fa-envelope"></i></button></a>
-        <Link to={"/post"}><button type="button" className="navbutt"><i className="fa-solid fa-pen"></i></button></Link>
-        <img src={user?.avatar} className="navicon" id="profbutt"/>
-        <div className="profdrop">
-          <Link to={`/auth/profile/${user?.username}`}>Profile</Link>
-          <a href="https://www.tumblr.com/dashboard">Likes</a>
-          <a href="https://www.tumblr.com/dashboard">Edit</a>
-        </div>
-	<p className="navtext">{user?.username}</p>
-
-        
-        
-      
-      </div>
-      <div id="icon-outline">
-      </div>
-
-      
-      <div id="icon">
-      <Link to={"/"} style={{display: "inline-block"}}><img src={window.location.origin + "/icon.png"} style={{width:"7vw", marginTop:"2.5vw", marginLeft:"4vw"}}/></Link>
-      </div>
-      
-    </div>
+    </div> 
       
     <div id="footer">
     </div>        </div>

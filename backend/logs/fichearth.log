@@ -1,0 +1,533 @@
+Starting FicHearth server...
+Server running on http://localhost:5000
+{
+  timestamp: '2025-04-17T17:46:30.573Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/api/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-17T17:46:37.702Z',
+  errorCode: '0-101 LOGIN_MISSING_FIELD',
+  route: '/api/login',
+  method: 'POST',
+  message: "Couldn't login."
+}
+{
+  timestamp: '2025-04-17T17:46:41.041Z',
+  errorCode: 'Code 0-103 LOGIN_INVALID_CREDENTIALS',
+  route: '/api/login',
+  method: 'POST',
+  message: "Couldn't login."
+}
+April 17, 2025 at 1:46 PM: [32mSUCCESS:[0m Logged in user cubiccrystal.
+April 17, 2025 at 1:46 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 1:46 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 1:47 PM: [32mSUCCESS:[0m Fetched profile.
+April 17, 2025 at 1:47 PM: [32mSUCCESS:[0m Fetched profile.
+April 17, 2025 at 1:47 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 1:47 PM: [32mSUCCESS:[0m Fetched self info.
+Starting FicHearth server...
+Server running on http://localhost:5000
+April 17, 2025 at 4:47 PM: [32mSUCCESS:[0m Refreshed access token.
+April 17, 2025 at 4:47 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 4:48 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 4:48 PM: [32mSUCCESS:[0m Fetched self info.
+/home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:306
+        console.error(formatTimestamp(Date.now()) + ": \x1b[31mERROR:\x1b[0m Failed to fetch new users for " + req.user.username + ". Code 0-398 USER_FETCH_ERROR");
+                ^
+
+ReferenceError: formatTimestamp is not defined
+    at /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:306:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+Node.js v23.9.0
+Starting FicHearth server...
+Server running on http://localhost:5000
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Refreshed access token.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 6:17 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 6:18 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 6:18 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 6:18 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 6:18 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 6:18 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 6:18 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 6:18 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 6:18 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 6:19 PM: [32mSUCCESS:[0m Logged out successfully.
+/home/cubiccrystal/FicHearth-Lite/backend/authRoutes.js:171
+			stack: err.stack,
+			       ^
+
+ReferenceError: err is not defined
+    at /home/cubiccrystal/FicHearth-Lite/backend/authRoutes.js:171:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+Node.js v23.9.0
+Starting FicHearth server...
+Server running on http://localhost:5000
+{
+  timestamp: '2025-04-18T02:36:36.183Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:38:10.856Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:39:30.740Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:39:38.790Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:40:00.276Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:40:00.442Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:40:48.835Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:40:49.394Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:41:15.198Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:41:15.557Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:41:24.661Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:41:24.960Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:41:51.165Z',
+  errorCode: '0-001 REGISTER_MISSING_FIELD',
+  route: '/auth/register',
+  method: 'POST',
+  message: "Couldn't register user."
+}
+{
+  timestamp: '2025-04-18T02:42:57.855Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:42:58.015Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:43:14.211Z',
+  errorCode: '0-003 REGISTER_INVALID_KEY',
+  route: '/auth/register',
+  method: 'POST',
+  message: "Couldn't register user."
+}
+{
+  timestamp: '2025-04-18T02:43:29.814Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:43:30.089Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:44:49.912Z',
+  errorCode: 'Code 0-099 REGISTER_ERROR',
+  route: '/auth/register',
+  method: 'POST',
+  message: "Couldn't register user.",
+  stack: 'error: syntax error at or near "COLUMN"\n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/authRoutes.js:65:4'
+}
+Starting FicHearth server...
+Server running on http://localhost:5000
+{
+  timestamp: '2025-04-18T02:46:37.593Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T02:46:37.708Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+April 17, 2025 at 10:46 PM: [32mSUCCESS:[0m Registered user.
+April 17, 2025 at 10:46 PM: [32mSUCCESS:[0m Logged in user gamer.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 10:47 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 10:47 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 10:47 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 10:47 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 10:47 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 10:47 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 10:47 PM: [33mWARN:[0m Rate limited for user ::1!
+Starting FicHearth server...
+Server running on http://localhost:5000
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 10:47 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 10:50 PM: [32mSUCCESS:[0m Fetched profile.
+April 17, 2025 at 10:50 PM: [32mSUCCESS:[0m Fetched posts for gamer.
+April 17, 2025 at 10:50 PM: [32mSUCCESS:[0m Fetched profile.
+April 17, 2025 at 10:50 PM: [32mSUCCESS:[0m Fetched posts for gamer.
+April 17, 2025 at 10:50 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 10:50 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 10:50 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 10:50 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 10:53 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 10:53 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 10:53 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 10:53 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 10:53 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 10:53 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 11:24 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 11:24 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 11:24 PM: [33mWARN:[0m Rate limited for user ::1!
+April 17, 2025 at 11:24 PM: [33mWARN:[0m Rate limited for user ::1!
+Starting FicHearth server...
+Server running on http://localhost:5000
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched self info.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched new users.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched posts.
+April 17, 2025 at 11:24 PM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Refreshed access token.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:26 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:26 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:26 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:26 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:26 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:26 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:26 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:26 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:26 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:26 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:26 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:26 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:27 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:27 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:27 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:27 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:27 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 12:27 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:27 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:27 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:27 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:27 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:27 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:37 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:37 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:37 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:37 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:37 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:37 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:39 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:39 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:39 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:39 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:39 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:39 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:39 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:39 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:39 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:39 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:39 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:40 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:40 AM: [32mSUCCESS:[0m Logged out successfully.
+{
+  timestamp: '2025-04-18T04:40:38.920Z',
+  errorCode: '0-101 LOGIN_MISSING_FIELD',
+  route: '/auth/login',
+  method: 'POST',
+  message: "Couldn't login."
+}
+April 18, 2025 at 12:41 AM: [32mSUCCESS:[0m Logged in user cubiccrystal.
+April 18, 2025 at 12:41 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:41 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:41 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:41 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:41 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:41 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:41 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:41 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:41 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:41 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:45 AM: [32mSUCCESS:[0m Logged out successfully.
+April 18, 2025 at 12:46 AM: [32mSUCCESS:[0m Registered user.
+{
+  timestamp: '2025-04-18T04:47:12.210Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T04:47:47.870Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+April 18, 2025 at 12:48 AM: [32mSUCCESS:[0m Registered user.
+{
+  timestamp: '2025-04-18T04:48:36.109Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+April 18, 2025 at 12:48 AM: [32mSUCCESS:[0m Registered user.
+{
+  timestamp: '2025-04-18T04:48:58.333Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T04:48:58.494Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+April 18, 2025 at 12:49 AM: [32mSUCCESS:[0m Logged in user lander3.
+April 18, 2025 at 12:49 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:49 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:49 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:49 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:49 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:49 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:59 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:59 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 12:59 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:59 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 12:59 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 12:59 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:00 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:00 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:00 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:00 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:00 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:00 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:02 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:02 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 1:03 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 1:03 AM: [33mWARN:[0m Rate limited for user ::1!
+April 18, 2025 at 1:03 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:03 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:03 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:03 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:03 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:03 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:06 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:06 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:06 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:06 AM: [32mSUCCESS:[0m Fetched posts for lander3.
+April 18, 2025 at 1:06 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:06 AM: [32mSUCCESS:[0m Fetched posts for lander3.
+Starting FicHearth server...
+Server running on http://localhost:5000
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched posts for lander3.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched posts for lander3.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched posts for lander3.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched posts for lander3.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:07 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:07 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:07 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:07 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:07 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:07 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:07 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:07 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:07 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:08 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:08 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:08 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:08 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:08 AM: [33mWARN:[0m Rate limited!
+April 18, 2025 at 1:08 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:08 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:08 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:08 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:08 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:08 AM: [32mSUCCESS:[0m Fetched self info.
+April 18, 2025 at 1:08 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:08 AM: [32mSUCCESS:[0m Fetched profile.
+April 18, 2025 at 1:09 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:09 AM: [32mSUCCESS:[0m Fetched new users.
+April 18, 2025 at 1:09 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:09 AM: [32mSUCCESS:[0m Fetched posts.
+April 18, 2025 at 1:09 AM: [32mSUCCESS:[0m Logged out successfully.
+{
+  timestamp: '2025-04-18T06:00:26.847Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}
+{
+  timestamp: '2025-04-18T14:22:20.138Z',
+  errorCode: '1-001 TOKEN_MISSING',
+  route: '/auth/refresh-token',
+  method: 'POST',
+  message: 'Authentication error.'
+}

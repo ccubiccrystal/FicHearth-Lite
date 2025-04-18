@@ -10,6 +10,8 @@ import EditProfile from "./pages/EditProfile";
 import EditPost from "./pages/EditPost";
 import Liked from "./pages/Liked";
 import Thread from "./pages/Thread";
+import Search from "./pages/Search";
+import EditInstance from "./pages/EditInstance";
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -31,11 +33,11 @@ function App() {
             try {
                 const response = await api.get("/auth/me");
                 setUser(response.data);
-		console.log("Loaded user data");
-		setLoading(false);
+		        console.log("Loaded user data");
+		        setLoading(false);
             } catch (error) {
                 console.error("Failed to fetch user", error);
-		setLoading(false);
+		        setLoading(false);
             }
         }
         fetchUser();
@@ -62,15 +64,18 @@ function App() {
             <Routes>
                 <Route path="/auth/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
                 <Route path="/" element={isAuthenticated ? <Navigate to="/posts/1" /> : <Navigate to="/auth/login" />} />
-		<Route path="/posts/:page" element={isAuthenticated ? <Home handleLogout={handleLogout} user={user}/> : <Navigate to="/auth/login" />} />
-		<Route path="/auth/register" element={<Register />} />
-		<Route path="/auth/profile/:username/" element={<Profile handleLogout={handleLogout} user={user}/>} />
-		<Route path="/auth/profile/:username/:page" element={<Profile handleLogout={handleLogout} user={user}/>} />
-		<Route path="/post" element={<Post handleLogout={handleLogout} user={user}/>} />
-		<Route path="/profile/edit" element={<EditProfile handleLogout={handleLogout} user={user}/>} />
-		<Route path="/post/edit/:post_id" element={<EditPost handleLogout={handleLogout} user={user}/>} />
-		<Route path="/liked/:page" element={<Liked handleLogout={handleLogout} user={user}/>} />
-		<Route path="/post/:post_id" element={<Thread handleLogout={handleLogout} user={user}/>} />
+                <Route path="/posts/:page" element={isAuthenticated ? <Home handleLogout={handleLogout} user={user}/> : <Navigate to="/auth/login" />} />
+                <Route path="/auth/register" element={<Register />} />
+                <Route path="/profile/:username/" element={<Profile handleLogout={handleLogout} user={user}/>} />
+                <Route path="/profile/:username/:page" element={<Profile handleLogout={handleLogout} user={user}/>} />
+                <Route path="/post" element={<Post handleLogout={handleLogout} user={user}/>} />
+                <Route path="/profile/edit" element={<EditProfile handleLogout={handleLogout} user={user}/>} />
+                <Route path="/post/edit/:post_id" element={<EditPost handleLogout={handleLogout} user={user}/>} />
+                <Route path="/liked/:page" element={<Liked handleLogout={handleLogout} user={user}/>} />
+                <Route path="/post/:post_id" element={<Thread handleLogout={handleLogout} user={user}/>} />
+                <Route path="/search/:type/:query" element={<Search handleLogout={handleLogout} user={user}/>} />
+                <Route path="/search/:type/:query/:page" element={<Search handleLogout={handleLogout} user={user}/>} />
+                <Route path="/instance/edit" element={<EditInstance handleLogout={handleLogout} user={user}/>} />
             </Routes>
         </Router>
     );

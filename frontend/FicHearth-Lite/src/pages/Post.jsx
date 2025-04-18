@@ -3,13 +3,19 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../api";
+import Navbar from "./parts/Navbar";
 
 export default function Home({handleLogout, user}) {
 
     const navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
+    const [tags, setTags] = useState([]);
+    const [tagInput, setTagInput] = useState("");
+    const [notifs, setNotifs] = useState("");
+    const [unread, setUnread] = useState("");
 
+	// Handles logout. Should probably be moved to App.
     const logout = async () => {
     	try {
 	    await handleLogout();
@@ -22,7 +28,7 @@ export default function Home({handleLogout, user}) {
 
     const handlePost = async () => {
 	try {
-	    const result = await api.post("/api/post", { title, content });
+	    const result = await api.post("/api/post", { title, content, tags });
 	    console.log("Post ID: " + result.data.id);
 	    navigate("/");
 	} catch (err) {
@@ -30,48 +36,74 @@ export default function Home({handleLogout, user}) {
 	}
     }
 
+    const handleKeyDown = (event) => {
+      if (event.key === "," || event.key === "Enter") {
+        event.preventDefault();
+        const newTag = tagInput.trim();
+        if (newTag && !tags.includes(newTag)) {
+          setTags([...tags, newTag]);
+        }
+        setTagInput(""); // Clear input field
+      }
+    };
+
+    const handleRemoveTag = (tagRemoved) => {
+      setTags(tags.filter((tag) => tag !== tagRemoved));
+    };
+
 
     return (
 
         <div>
             <div id="wrapper">
     
-      <div id="main">
-      	        <div className="post">
-
+            <div id="collect"><div id="main">
+      	        <div className="newpost">
+                  
+      
 	
-	    <input
-		type="text"
-		placeholder="Post title"
-		value={title}
-		onChange={(e) => setTitle(e.target.value)}
+	    <textarea
+        type="text"
+        placeholder="Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        id="titleinput"
 	    /><br/>
 	    <textarea
-		placeholder="Compose a post!"
-		value={content}
-		rows={10}
-		onChange={(e) => setContent(e.target.value)}
-		id="contentinput"
+        placeholder="Compose a post!"
+        value={content}
+        rows={10}
+        onChange={(e) => setContent(e.target.value)}
+        id="contentinput"
+	    />
+      <div>
+        {tags.map((tag, index) => (
+          <span key={index} class="tag">
+            {tag} <button class="tagx" onClick={() => handleRemoveTag(tag)}>x</button>
+          </span>
+        ))}
+      </div>
+	    <textarea
+        placeholder="Add tags (comma or enter between each tag)"
+        value={tagInput}
+        rows={1}
+        onKeyDown={handleKeyDown}
+        onChange={(e) => setTagInput(e.target.value)}
+        id="taginput"
 	    /><br/>
-	    <button type="button" onClick={handlePost}>Post</button>
+	    <button id="postbutton" type="button" onClick={handlePost}>Post</button>
 		
         
         </div>
       
       </div>
+      </div>
       
-      <div id="navbar">
       
-        <button type="button" className="navbutt" onClick={logout}><i className="fa-solid fa-right-to-bracket"></i></button>
-        <a  href="https://www.tumblr.com/dashboard"><button type="button" className="navbutt"><i className="fa-solid fa-gear"></i></button></a>
-        <a  href="https://www.tumblr.com/dashboard"><button type="button" className="navbutt"><i className="fa-solid fa-envelope"></i></button></a>
-        <Link to={"/post"}><button type="button" className="navbutt"><i className="fa-solid fa-pen"></i></button></Link>
-        <button type="button" className="navbutt" id="profbutt"><i className="fa-solid fa-user"></i></button>
-        <div className="profdrop">
-          <Link to={`/auth/profile/${user?.username}`}>Profile</Link>
-          <a href="https://www.tumblr.com/dashboard">Likes</a>
-          <a href="https://www.tumblr.com/dashboard">Edit</a>
-        </div>
+      
+        
+        <Navbar user={user} logout={logout} notifs={notifs} unread={unread} setUnread={setUnread} />
+
       <div id="sidebar-outline">
       
       <div id="sidebar">
@@ -87,21 +119,8 @@ export default function Home({handleLogout, user}) {
         
       </div>
       </div>
-        
-        
       
-      </div>
-      
-      <div id="menu">
-      </div>
 
-      <div id="icon-outline">
-      </div>
-
-      
-      <div id="icon">
-      <Link to={"/"} style={{display: "inline-block"}}><img src={window.location.origin + "/icon.png"} style={{width:"7vw", marginTop:"2.5vw", marginLeft:"4vw"}}/></Link>
-      </div>
       
     </div>
       

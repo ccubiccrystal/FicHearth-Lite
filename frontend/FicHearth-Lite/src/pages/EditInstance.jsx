@@ -5,15 +5,14 @@ import { Link } from "react-router-dom";
 import api from "../api";
 import Navbar from "./parts/Navbar";
 
-export default function EditProfile({handleLogout, user}) {
+export default function EditInstance({handleLogout, user}) {
 
     const navigate = useNavigate();
 
-	const [avatar, setAvatar] = useState(""); // For setting avatar URL
-    const [bio, setBio] = useState(""); // For setting bio
-    const [aliases, setAliases] = useState (""); // For setting aliases
-    const [field1, setField1] = useState(""); // For setting optional field 1
-    const [field2, setField2] = useState(""); // For setting optional field 2
+	const [name, setName] = useState("");
+	const [description, setDescription] = useState("");
+	const [contact, setContact] = useState("");
+	const [rules, setRules] = useState("");
 	const [notifs, setNotifs] = useState(""); // Handles notifications
 	const [unread, setUnread] = useState(""); // Handles unread notifications
     const [loading, setLoading] = useState(true); // Handles page loading
@@ -31,31 +30,28 @@ export default function EditProfile({handleLogout, user}) {
 
 	// Loads the current user profile for editing purposes
     useEffect(() => {
-		async function loadProfile() {
+		async function loadInstance() {
 			try {
-				const profile = await api.get(`/auth/profile/${user.username}`);
-				setAvatar(profile.data.user.avatar);
-				setBio(profile.data.user.bio);
-				setAliases(profile.data.user.aliases);
-				setField1(profile.data.user.field1);
-				setField2(profile.data.user.field2);
+				const profile = await api.get(`/api/instanceinfo`);
+				setName(profile.data.instance.name);
+				setDescription(profile.data.instance.description);
+				setContact(profile.data.instance.admin_contact);
+				setRules(profile.data.instance.rules);
 				setLoading(false);
 			} catch (err) {
-				console.error("Failed to load profile info ", error);
+				console.error("Failed to load instance info ", err);
 			}
 		}
-		loadProfile();
+		loadInstance();
     }, []);
 
 	// Handles editing of the current user info
     const handleEdit = async () => {
 		try {
-			console.log("AVATAR: " + avatar);
-			const result = await api.put("/api/editprofile", { avatar, bio, aliases, field1, field2 });
-			console.log("Post ID: " + result.data.id);
-			navigate(`/profile/${user.username}`);
+			const result = await api.patch("/api/editinstance", { name, description, contact, rules });
+			navigate(`/`);
 		} catch (err) {
-			console.error("Failed to create post ", error);
+			console.error("Failed to edit instance ", err);
 		}
     }
 
@@ -75,42 +71,36 @@ export default function EditProfile({handleLogout, user}) {
 					<div id="main">
       	        
 						<div className="editbox">
+							<h2>Instance Name:</h2>
 							<textarea
-								placeholder="Avatar (link to image)"
-								value={avatar}
+								value={name}
 								rows={1}
-								onChange={(e) => setAvatar(e.target.value)}
-								id="avainput"
-							>{avatar}</textarea><br/>
+								maxlength={127}
+								onChange={(e) => setName(e.target.value)}
+								id="nameinput"
+							>{name}</textarea><br/>
+							<h2>Description:</h2>
 							<textarea
-								placeholder="Bio"
-								value={bio}
+								value={description}
 								rows={10}
-								onChange={(e) => setBio(e.target.value)}
-								id="bioinput"
-							>{bio}</textarea><br/>
+								onChange={(e) => setDescription(e.target.value)}
+								id="descinput"
+							>{description}</textarea><br/>
+							<h2>Admin Contact:</h2>
 							<textarea
-								placeholder="Aliases"
-								value={aliases}
-								rows={3}
-								maxlength={256}
-								onChange={(e) => setAliases(e.target.value)}
-								id="pronouninput"
-							>{aliases}</textarea><br/>
+								value={contact}
+								rows={1}
+								maxlength={64}
+								onChange={(e) => setContact(e.target.value)}
+								id="contactinput"
+							></textarea><br/>
+							<h2>Rules:</h2>
 							<textarea
-								placeholder="Extra 1 (links, favorites, or anything else!)"
-								value={field1}
-								rows={5}
-								onChange={(e) => setField1(e.target.value)}
-								id="field1input"
-							>{field1}</textarea><br/>
-							<textarea
-								placeholder="Extra 2 (links, favorites, or anything else!)"
-								value={field2}
-								rows={5}
-								onChange={(e) => setField2(e.target.value)}
-								id="field2input"
-							>{field2}</textarea><br/>
+								value={rules}
+								rows={10}
+								onChange={(e) => setRules(e.target.value)}
+								id="rulesinput"
+							>{rules}</textarea><br/>
 
 	    					<button class="editsubmit" type="button" onClick={handleEdit}>Edit</button>
 		
