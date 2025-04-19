@@ -26,7 +26,7 @@ export default function Login({ setIsAuthenticated }) {
     };
 
     const goRegister = async () => {
-	navigate("/auth/register");
+	navigate("/register");
     }
 
     return (

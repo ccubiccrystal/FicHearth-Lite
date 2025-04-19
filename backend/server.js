@@ -8,7 +8,8 @@ const rateLimit = require("express-rate-limit");
 
 const authRoutes = require("./authRoutes");
 const generalRoutes = require("./generalRoutes");
-const port = 5000;
+const url = "http://142.93.180.129";
+const port = 5003;
 
 console.log("Starting FicHearth server...");
 
@@ -39,7 +40,8 @@ const limiter = rateLimit({
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: ['http://fichearth.net', 'http://www.fichearth.net'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true, // Allow credentials (cookies, etc.)
 }));
 app.use(limiter);
@@ -50,13 +52,7 @@ const router = express.Router();
 app.use("/auth", authRoutes);
 app.use("/api", generalRoutes);
 
-const corsOptions = {
-  origin: 'http://localhost:5173',  // Allow requests only from your frontend
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,  // Allow credentials like cookies or headers
-};
-
 // Start the server
-app.listen(port, () => {
-	console.log('Server running on http://localhost:' + port);
+app.listen(port, '0.0.0.0', () => {
+	console.log('Server running on http://142.93.180.129:' + port);
 });

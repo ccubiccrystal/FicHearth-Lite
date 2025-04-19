@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:5000", // Change this to your backend URL
+	baseURL: import.meta.env.PROD ? "/" : "http://localhost:5003", // Change this to your backend URL
     withCredentials: true, // Allows sending cookies (for refresh token)
 });
 
@@ -25,7 +25,7 @@ api.interceptors.response.use(
 
                     // Call refresh endpoint
                     const refreshResponse = await axios.post(
-                        "http://localhost:5000/auth/refresh-token",
+                        "/auth/refresh-token",
                         {},
                         { withCredentials: true }
                     );
@@ -40,9 +40,9 @@ api.interceptors.response.use(
             	    error.config.headers["Authorization"] = `Bearer ${newAccessToken}`;
             	    return api.request(error.config);
             	} catch (refreshError) {
-				if (!window.location.href.includes("/auth/login")) { 
+				if (!window.location.href.includes("/login")) { 
 					console.error("Refresh token failed" + window.location.href + " ", refreshError);
-					window.location.href = "/auth/login"; // Redirect to login if refresh fails
+					window.location.href = "/login"; // Redirect to login if refresh fails
 					return Promise.reject(refreshError);
 				}
             	}

@@ -62,10 +62,11 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/auth/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-                <Route path="/" element={isAuthenticated ? <Navigate to="/posts/1" /> : <Navigate to="/auth/login" />} />
-                <Route path="/posts/:page" element={isAuthenticated ? <Home handleLogout={handleLogout} user={user}/> : <Navigate to="/auth/login" />} />
-                <Route path="/auth/register" element={<Register />} />
+                <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+                <Route path="/" element={isAuthenticated ? <Navigate to="/posts/1" /> : <Navigate to="/login" />} />
+	        <Route path="/posts" element={isAuthenticated ? <Home handleLogout={handleLogout} user={user}/> : <Navigate to="/login" />} />
+                <Route path="/posts/:page" element={isAuthenticated ? <Home handleLogout={handleLogout} user={user}/> : <Navigate to="/login" />} />
+                <Route path="/register" element={<Register />} />
                 <Route path="/profile/:username/" element={<Profile handleLogout={handleLogout} user={user}/>} />
                 <Route path="/profile/:username/:page" element={<Profile handleLogout={handleLogout} user={user}/>} />
                 <Route path="/post" element={<Post handleLogout={handleLogout} user={user}/>} />

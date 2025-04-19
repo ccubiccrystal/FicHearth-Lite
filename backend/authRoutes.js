@@ -177,8 +177,8 @@ router.post("/login", async (req, res) => {
 		// Send refresh token in httpOnly cookie
 		res.cookie("refresh_token", refreshToken, {
 			httpOnly: true,
-			secure: process.env.NODE_ENV === "production",
-			sameSite: "Strict",
+			secure: false, //process.env.NODE_ENV === "production",
+			sameSite: "Lax",
 			maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
 		});
 		console.log(formatTimestamp(Date.now()) + ": \x1b[32mSUCCESS:\x1b[0m Logged in user " + username + ".");

@@ -14,7 +14,7 @@ BACKEND_PID=$!
 echo "Starting frontend..."
 cd ../
 cd frontend/FicHearth-Lite
-npm run dev &
+npm run build &
 FRONTEND_PID=$!
 
 echo "FicHearth is running!"

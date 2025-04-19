@@ -368,7 +368,7 @@ router.get("/user/posts", authenticateToken, async (req, res) => {
             DESC LIMIT $3 OFFSET $4`,
             [req.user.id, username, limit, offset]
         );
-		console.log(formatTimestamp(Date.now()) + ": \x1b[32mSUCCESS:\x1b[0m Fetched posts for " + req.user.username + ".");
+		console.log(formatTimestamp(Date.now()) + ": \x1b[32mSUCCESS:\x1b[0m Fetched posts.");
         res.json({ posts: result.rows });
     } catch (err) {
 		console.error({
