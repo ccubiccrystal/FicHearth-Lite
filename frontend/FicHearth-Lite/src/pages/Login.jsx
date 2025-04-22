@@ -35,6 +35,7 @@ export default function Login({ setIsAuthenticated }) {
 				<h1 class="title">-= Login =-</h1>
 			</div>
 
+			<div id="wrapper" style={{minHeight:"50vw"}}>
 			<div class="logreg">
 				<div>
 					<form onSubmit={handleSubmit}>
@@ -56,6 +57,7 @@ export default function Login({ setIsAuthenticated }) {
 					</form>
 					<button id="switchlogreg" onClick={goRegister}>Sign Up</button>
 				</div>
+			</div>
 			</div>
 
 			

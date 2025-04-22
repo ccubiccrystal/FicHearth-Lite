@@ -2332,3 +2332,730 @@ April 19, 2025 at 4:11 PM: [32mSUCCESS:[0m Fetched self info.
   method: 'POST',
   message: 'Authentication error.'
 }
+Starting FicHearth server...
+Server running on http://142.93.180.129:5003
+Starting FicHearth server...
+node:events:485
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:5003
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at node:net:2203:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 5003
+}
+
+Node.js v23.9.0
+Starting FicHearth server...
+node:events:485
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:5003
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at node:net:2203:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 5003
+}
+
+Node.js v23.9.0
+Starting FicHearth server...
+node:events:485
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:5003
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at node:net:2203:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 5003
+}
+
+Node.js v23.9.0
+Starting FicHearth server...
+node:events:485
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:5003
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at node:net:2203:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 5003
+}
+
+Node.js v23.9.0
+Starting FicHearth server...
+node:events:485
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5003
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (/home/cubiccrystal/FicHearth-Lite/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/cubiccrystal/FicHearth-Lite/backend/server.js:56:5)
+    at Module._compile (node:internal/modules/cjs/loader:1734:14)
+    at Object..js (node:internal/modules/cjs/loader:1899:10)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 5003
+}
+
+Node.js v23.9.0
+Starting FicHearth server...
+node:events:485
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5003
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (/home/cubiccrystal/FicHearth-Lite/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/cubiccrystal/FicHearth-Lite/backend/server.js:56:5)
+    at Module._compile (node:internal/modules/cjs/loader:1734:14)
+    at Object..js (node:internal/modules/cjs/loader:1899:10)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 5003
+}
+
+Node.js v23.9.0
+Starting FicHearth server...
+node:events:485
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5003
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at Function.listen (/home/cubiccrystal/FicHearth-Lite/backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/home/cubiccrystal/FicHearth-Lite/backend/server.js:56:5)
+    at Module._compile (node:internal/modules/cjs/loader:1734:14)
+    at Object..js (node:internal/modules/cjs/loader:1899:10)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 5003
+}
+
+Node.js v23.9.0
+Starting FicHearth server...
+Server running... port = 5004
+{
+  timestamp: '2025-04-20T20:41:31.403Z',
+  errorCode: '0-199 LOGIN_ERROR',
+  route: '/auth/login',
+  method: 'POST',
+  message: "Couldn't login user.",
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/authRoutes.js:125:22'
+}
+{
+  timestamp: '2025-04-20T20:41:41.374Z',
+  errorCode: '0-199 LOGIN_ERROR',
+  route: '/auth/login',
+  method: 'POST',
+  message: "Couldn't login user.",
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/authRoutes.js:125:22'
+}
+{
+  timestamp: '2025-04-20T20:42:06.323Z',
+  errorCode: '0-199 LOGIN_ERROR',
+  route: '/auth/login',
+  method: 'POST',
+  message: "Couldn't login user.",
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/authRoutes.js:125:22'
+}
+Starting FicHearth server...
+Server running... port = 5004
+April 20, 2025 at 4:43 PM: [32mSUCCESS:[0m Logged in user cubiccrystal.
+April 20, 2025 at 4:43 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 4:43 PM: [32mSUCCESS:[0m Fetched self info.
+{
+  timestamp: '2025-04-20T20:43:20.973Z',
+  errorCode: '2-098 POST_FETCH_ERROR',
+  route: '/api/posts',
+  method: 'GET',
+  message: 'Error fetching posts.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:180:26'
+}
+{
+  timestamp: '2025-04-20T20:43:20.976Z',
+  errorCode: '0-398 USER_FETCH_ERROR',
+  route: '/api/newusers',
+  method: 'GET',
+  message: 'Failed to fetch new users.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:315:21'
+}
+{
+  timestamp: '2025-04-20T20:43:20.978Z',
+  errorCode: '3-001 INSTANCE_INFO_FETCH_ERROR',
+  route: '/api/instanceinfo',
+  method: 'GET',
+  message: 'Failed to fetch instance info.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:820:24'
+}
+{
+  timestamp: '2025-04-20T20:43:20.978Z',
+  errorCode: '2-098 POST_FETCH_ERROR',
+  route: '/api/posts',
+  method: 'GET',
+  message: 'Error fetching posts.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:180:26'
+}
+{
+  timestamp: '2025-04-20T20:43:20.982Z',
+  errorCode: '0-398 USER_FETCH_ERROR',
+  route: '/api/newusers',
+  method: 'GET',
+  message: 'Failed to fetch new users.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:315:21'
+}
+{
+  timestamp: '2025-04-20T20:43:20.983Z',
+  errorCode: '3-001 INSTANCE_INFO_FETCH_ERROR',
+  route: '/api/instanceinfo',
+  method: 'GET',
+  message: 'Failed to fetch instance info.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:820:24'
+}
+April 20, 2025 at 4:43 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 4:43 PM: [32mSUCCESS:[0m Fetched self info.
+{
+  timestamp: '2025-04-20T20:43:23.255Z',
+  errorCode: '2-098 POST_FETCH_ERROR',
+  route: '/api/posts',
+  method: 'GET',
+  message: 'Error fetching posts.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:180:26'
+}
+{
+  timestamp: '2025-04-20T20:43:23.255Z',
+  errorCode: '0-398 USER_FETCH_ERROR',
+  route: '/api/newusers',
+  method: 'GET',
+  message: 'Failed to fetch new users.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:315:21'
+}
+{
+  timestamp: '2025-04-20T20:43:23.257Z',
+  errorCode: '3-001 INSTANCE_INFO_FETCH_ERROR',
+  route: '/api/instanceinfo',
+  method: 'GET',
+  message: 'Failed to fetch instance info.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:820:24'
+}
+{
+  timestamp: '2025-04-20T20:43:23.260Z',
+  errorCode: '2-098 POST_FETCH_ERROR',
+  route: '/api/posts',
+  method: 'GET',
+  message: 'Error fetching posts.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:180:26'
+}
+{
+  timestamp: '2025-04-20T20:43:23.260Z',
+  errorCode: '0-398 USER_FETCH_ERROR',
+  route: '/api/newusers',
+  method: 'GET',
+  message: 'Failed to fetch new users.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:315:21'
+}
+{
+  timestamp: '2025-04-20T20:43:23.261Z',
+  errorCode: '3-001 INSTANCE_INFO_FETCH_ERROR',
+  route: '/api/instanceinfo',
+  method: 'GET',
+  message: 'Failed to fetch instance info.',
+  stack: 'AggregateError [ECONNREFUSED]: \n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:820:24'
+}
+Starting FicHearth server...
+Server running... port = 5004
+April 20, 2025 at 4:43 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 4:43 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 4:43 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 4:43 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 4:43 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 4:43 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:02 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 5:02 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 5:02 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:02 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:02 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:02 PM: [32mSUCCESS:[0m Fetched posts.
+Starting FicHearth server...
+Server running... port = 5004
+April 20, 2025 at 5:05 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 5:05 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 5:05 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:05 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:05 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:05 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:05 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:05 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:05 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:05 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:13 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 5:13 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 5:13 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:13 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:13 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:13 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:16 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:16 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:16 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:16 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:18 PM: [32mSUCCESS:[0m Fetched profile.
+April 20, 2025 at 5:18 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:18 PM: [32mSUCCESS:[0m Fetched profile.
+April 20, 2025 at 5:18 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:18 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:18 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:18 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:18 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:26 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 5:26 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 5:26 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:26 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:26 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:26 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:27 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:27 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:27 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:27 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:27 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:27 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:27 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:46 PM: [32mSUCCESS:[0m Logged in user cubiccrystal.
+April 20, 2025 at 5:46 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 5:46 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 5:46 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:46 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:46 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:46 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched profile.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched profile.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched profile.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched profile.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:52 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 5:53 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 5:53 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 6:35 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 6:35 PM: [32mSUCCESS:[0m Fetched self info.
+April 20, 2025 at 6:35 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 6:35 PM: [32mSUCCESS:[0m Fetched new users.
+April 20, 2025 at 6:35 PM: [32mSUCCESS:[0m Fetched posts.
+April 20, 2025 at 6:35 PM: [32mSUCCESS:[0m Fetched posts.
+Starting FicHearth server...
+Server running... port = 5004
+April 21, 2025 at 1:23 PM: [32mSUCCESS:[0m Logged in user cubiccrystal.
+April 21, 2025 at 1:23 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:23 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:23 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:23 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:23 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 1:23 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched new users.
+{
+  timestamp: '2025-04-21T17:28:05.186Z',
+  errorCode: '2-098 POST_FETCH_ERROR',
+  route: '/api/tagged',
+  method: 'GET',
+  message: 'Failed to fetch posts by tags.',
+  stack: 'error: OFFSET must not be negative\n' +
+    '    at /home/cubiccrystal/FicHearth-Lite/backend/node_modules/pg-pool/index.js:45:11\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async /home/cubiccrystal/FicHearth-Lite/backend/generalRoutes.js:773:24'
+}
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:28 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:28 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:28 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:28 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:28 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:28 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:28 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:29 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:29 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:29 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:29 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:29 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 1:29 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched profile.
+April 21, 2025 at 1:30 PM: [32mSUCCESS:[0m Fetched profile.
+April 21, 2025 at 1:31 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:31 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:31 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:31 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:31 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:31 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:31 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:31 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:31 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:31 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:31 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:31 PM: [33mWARN:[0m Rate limited!
+April 21, 2025 at 1:31 PM: [33mWARN:[0m Rate limited!
+Starting FicHearth server...
+Server running... port = 5004
+April 21, 2025 at 1:32 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:32 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 1:32 PM: [32mSUCCESS:[0m Fetched profile.
+April 21, 2025 at 1:32 PM: [32mSUCCESS:[0m Fetched profile.
+April 21, 2025 at 1:32 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:32 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 1:32 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 1:32 PM: [32mSUCCESS:[0m Fetched posts.
+Starting FicHearth server...
+Server running... port = 5004
+April 21, 2025 at 2:27 PM: [32mSUCCESS:[0m Logged in user cubiccrystal.
+April 21, 2025 at 2:28 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 2:28 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 2:28 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 2:28 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 2:28 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 2:28 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 3:21 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 3:21 PM: [32mSUCCESS:[0m Fetched self info.
+April 21, 2025 at 3:21 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 3:21 PM: [32mSUCCESS:[0m Fetched new users.
+April 21, 2025 at 3:21 PM: [32mSUCCESS:[0m Fetched posts.
+April 21, 2025 at 3:21 PM: [32mSUCCESS:[0m Fetched posts.
+Starting FicHearth server...
+Server running... port = 5004
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Logged in user cubiccrystal.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 9:34 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 9:45 AM: [32mSUCCESS:[0m Created post.
+April 22, 2025 at 9:45 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:45 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:45 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 9:45 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 9:55 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 9:55 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 9:55 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:55 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:55 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 9:55 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 9:56 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:56 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:56 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:56 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:56 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 9:56 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 9:56 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:02 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:02 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:02 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:02 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:16 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:16 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:16 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:16 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:17 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:18 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:18 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:18 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:18 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:20 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:20 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:20 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:20 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:20 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:20 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:20 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:20 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:21 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:22 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:25 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:25 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:25 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:25 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:34 AM: [32mSUCCESS:[0m Logged in user cubiccrystal.
+April 22, 2025 at 10:34 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:34 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:34 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:34 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:34 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:34 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:35 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:35 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:38 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:38 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:38 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:38 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:39 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:39 AM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 10:39 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:39 AM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 10:42 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:42 AM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 10:42 AM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 10:42 AM: [32mSUCCESS:[0m Fetched posts.
+Starting FicHearth server...
+Server running... port = 5004
+April 22, 2025 at 1:54 PM: [32mSUCCESS:[0m Logged in user cubiccrystal.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 1:55 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 1:56 PM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 1:56 PM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 1:56 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 1:56 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched self info.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 2:02 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched profile.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched new users.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched posts.
+April 22, 2025 at 2:13 PM: [32mSUCCESS:[0m Fetched posts.

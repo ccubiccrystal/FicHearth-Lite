@@ -1,3 +1,5 @@
 node_modules/
 .env
 postgrest.conf
+server.js
+logs/fichearth.log

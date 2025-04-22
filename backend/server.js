@@ -9,7 +9,7 @@ const rateLimit = require("express-rate-limit");
 const authRoutes = require("./authRoutes");
 const generalRoutes = require("./generalRoutes");
 const url = "http://142.93.180.129";
-const port = 5003;
+const port = 5004;
 
 console.log("Starting FicHearth server...");
 
@@ -25,26 +25,26 @@ const formatTimestamp = (isoString) => {
 	}).format(date);
 };
 
-const limiter = rateLimit({
-	windowMs: 1 * 60 * 1000, // 1 minute
-	max: 30, // limit each IP to 30 requests per window
-	message: {
-	  	error: 'Too many requests. Please wait a moment and try again.',
-	  	code: '4-999 RATE_LIMITED',
-	},
-	handler: (req, res, next, options) => {
-		console.warn(formatTimestamp(Date.now()) + ": \x1b[33mWARN:\x1b[0m Rate limited!");
-	}
-});
+// const limiter = rateLimit({
+// 	windowMs: 1 * 60 * 1000, // 1 minute
+// 	max: 30, // limit each IP to 30 requests per window
+// 	message: {
+// 	  	error: 'Too many requests. Please wait a moment and try again.',
+// 	  	code: '4-999 RATE_LIMITED',
+// 	},
+// 	handler: (req, res, next, options) => {
+// 		console.warn(formatTimestamp(Date.now()) + ": \x1b[33mWARN:\x1b[0m Rate limited!");
+// 	}
+// });
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: ['http://fichearth.net', 'http://www.fichearth.net'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   credentials: true, // Allow credentials (cookies, etc.)
 }));
-app.use(limiter);
+//app.use(limiter);
 
 const router = express.Router();
 
@@ -53,6 +53,6 @@ app.use("/auth", authRoutes);
 app.use("/api", generalRoutes);
 
 // Start the server
-app.listen(port, '0.0.0.0', () => {
-	console.log('Server running on http://142.93.180.129:' + port);
+app.listen(port, () => {
+	console.log('Server running... port = ' + port);
 });

@@ -8,11 +8,11 @@ const sanitizeHtml = require("sanitize-html");
 
 dotenv.config();
 
-const DB_NAME = process.env.DB_NAME;
-const DB_HOST = process.env.DB_HOST;
-const DB_USER = process.env.DB_USER;
-const DB_PASSWORD = process.env.DB_PASSWORD;
-const DB_PORT = process.env.DB_PORT;
+const DB_NAME = process.env.DB_NAME || 'fichearth';
+const DB_HOST = process.env.DB_HOST || 'localhost';
+const DB_USER = process.env.DB_USER || 'postgres';
+const DB_PASSWORD = process.env.DB_PASSWORD || 'postgres';
+const DB_PORT = process.env.DB_PORT || '5432';
 
 const router = express.Router();
 const pool = new Pool({ 
@@ -22,10 +22,6 @@ const pool = new Pool({
 	password: DB_PASSWORD,
 	port: DB_PORT,
 });
-
-const JWT_SECRET = process.env.JWT_SECRET;
-const COOKIE_SECRET = process.env.COOKIE_SECRET;
-const SITE_URL = process.env.SITE_URL || 'http://localhost:5000';
 
 const formatTimestamp = (isoString) => {
 	const date = new Date(isoString);

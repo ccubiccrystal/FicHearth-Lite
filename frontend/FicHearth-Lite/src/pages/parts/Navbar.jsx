@@ -64,14 +64,14 @@ export default function Navbar({user, logout, notifs, unread, setUnread}) {
         
                 <Link to={"/post"}><button type="button" className="navbutt"><i className="fa-solid fa-pen"></i></button></Link>
                 <img src={user.avatar ? user.avatar : "/default.webp"} className="navicon" id="profbutt"/>
-                <div className="profdrop" style={user.owner ? {left: "78vw"} : {}}>
+                <div className="profdrop" onclick="this.classList.toggle('active')" id={user.owner ? "owndrop" : "drop"}>
                     <Link to={`/profile/${user?.username}`}>Profile</Link>
                     <Link to="/liked/1">Likes</Link>
                     <Link to="/profile/edit">Edit</Link>
                 </div>
         
 	            <p className="navtext">{user?.username}</p>
-                {unread > 0 ? <div id="notifalert" style={user.owner ? {left: "88.8vw"} : {}}><b>{unread}</b></div> : <div></div>}
+                {unread > 0 ? <div id={user.owner ? "ownnotifalert" : "notifalert"}><b>{unread}</b></div> : <div></div>}
                 <div class="search">
                     <textarea id="searchbar" class="searchbar" 
                         placeholder="Search..." 
@@ -87,7 +87,7 @@ export default function Navbar({user, logout, notifs, unread, setUnread}) {
             </div>
       
             <div id="icon">
-                <Link to={"/"} style={{display: "inline-block"}}><img id="iconimg" src={window.location.origin + "/icon.png"} style={{width:"7vw", marginTop:"2.5vw", marginLeft:"4vw"}}/></Link>
+                <Link to={"/"} style={{display: "inline-block"}}><img id="iconimg" src={window.location.origin + "/icon.png"}/></Link>
             </div>
         </div>
       );

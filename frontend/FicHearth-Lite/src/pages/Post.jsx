@@ -55,7 +55,7 @@ export default function Home({handleLogout, user}) {
     return (
 
         <div>
-            <div id="wrapper">
+            <div id="wrapper" style={{minHeight:"50vw"}}>
     
             <div id="collect"><div id="main">
       	        <div className="newpost">
@@ -104,7 +104,12 @@ export default function Home({handleLogout, user}) {
         
         <Navbar user={user} logout={logout} notifs={notifs} unread={unread} setUnread={setUnread} />
 
-      <div id="sidebar-outline">
+      
+      
+
+      
+    </div>
+    <div id="sidebar-outline">
       
       <div id="sidebar">
       
@@ -119,10 +124,6 @@ export default function Home({handleLogout, user}) {
         
       </div>
       </div>
-      
-
-      
-    </div>
       
     <div id="footer">
     </div>        </div>
