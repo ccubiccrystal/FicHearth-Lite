@@ -11,7 +11,9 @@ import EditPost from "./pages/EditPost";
 import Liked from "./pages/Liked";
 import Thread from "./pages/Thread";
 import Search from "./pages/Search";
+import Instance from "./pages/Instance";
 import EditInstance from "./pages/EditInstance";
+import TagWeb from "./pages/TagWeb";
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -46,12 +48,12 @@ function App() {
 
     const handleLogout = async () => {
     	try {
-	    await api.post("/auth/logout");
-	    setIsAuthenticated(false);
-	    setUser(null);
-	} catch (error) {
-	    console.error("Logout failed", error);
-	}
+            await api.post("/auth/logout");
+            setIsAuthenticated(false);
+            setUser(null);
+        } catch (error) {
+            console.error("Logout failed", error);
+        }
     }
 
     if (loading) {
@@ -64,7 +66,7 @@ function App() {
             <Routes>
                 <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
                 <Route path="/" element={isAuthenticated ? <Navigate to="/posts/1" /> : <Navigate to="/login" />} />
-	        <Route path="/posts" element={isAuthenticated ? <Home handleLogout={handleLogout} user={user}/> : <Navigate to="/login" />} />
+	            <Route path="/posts" element={isAuthenticated ? <Home handleLogout={handleLogout} user={user}/> : <Navigate to="/login" />} />
                 <Route path="/posts/:page" element={isAuthenticated ? <Home handleLogout={handleLogout} user={user}/> : <Navigate to="/login" />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/profile/:username/" element={<Profile handleLogout={handleLogout} user={user}/>} />
@@ -76,7 +78,9 @@ function App() {
                 <Route path="/post/:post_id" element={<Thread handleLogout={handleLogout} user={user}/>} />
                 <Route path="/search/:type/:query" element={<Search handleLogout={handleLogout} user={user}/>} />
                 <Route path="/search/:type/:query/:page" element={<Search handleLogout={handleLogout} user={user}/>} />
+                <Route path="/instance" element={<Instance handleLogout={handleLogout} user={user}/>} />
                 <Route path="/instance/edit" element={<EditInstance handleLogout={handleLogout} user={user}/>} />
+                <Route path="/instance/tagweb" element={<TagWeb handleLogout={handleLogout} user={user}/>} />
             </Routes>
         </Router>
     );

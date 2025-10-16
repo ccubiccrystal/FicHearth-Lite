@@ -38,7 +38,7 @@ export default function Navbar({user, logout, notifs, unread, setUnread}) {
     }
 
     const editInstance = () => {
-        navigate("/instance/edit")
+        navigate("/instance ")
     }
     
 

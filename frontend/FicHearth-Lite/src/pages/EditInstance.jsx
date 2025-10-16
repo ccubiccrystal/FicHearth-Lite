@@ -55,6 +55,10 @@ export default function EditInstance({handleLogout, user}) {
 		}
     }
 
+	const back = () => {
+		navigate("/instance");
+	}
+
 	// Handles page loading so that things don't try to load before they've arrived from the backend.
     if (loading) {
 		return <div>loading...</div>;
@@ -102,6 +106,7 @@ export default function EditInstance({handleLogout, user}) {
 								id="rulesinput"
 							>{rules}</textarea><br/>
 
+							<button class="back" type="button" onClick={back}>Go back</button>
 	    					<button class="editsubmit" type="button" onClick={handleEdit}>Edit</button>
 		
         				</div>

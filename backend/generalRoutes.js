@@ -868,6 +868,89 @@ router.patch("/editinstance", authenticateToken, async (req, res) => {
     }
 });
 
+router.get("/taginfo", authenticateToken, async (req, res) => {
+    try {
+        const subtag = req.query.tag;
+        const canonical = await pool.query(
+            `SELECT
+                canonicaltags.*,
+                tags.id AS subtag_id
+            FROM canonicaltags
+            FULL JOIN tags
+                ON tags.canon_id = canonicaltags.id
+            WHERE tags.name = $1`,
+            [subtag]
+        );
+
+        if (canonical.rows.length > 0) {
+
+            if (canonical.rows[0].id) {
+                // do the important stuff here
+                tagInfo = await pool.query(
+                    `SELECT
+                        tags.name
+                    FROM canonicaltags
+                    LEFT JOIN tags
+                        ON tags.canon_id = canonicaltags.id
+                    WHERE canonicaltags.id = $1`,
+                    [canonical.rows[0].canonical_id]
+                );
+                return res.status(200).json({ canonical: canonical.rows[0], tagInfo: tagInfo, tagexists: true });
+            }
+            
+            if (canonical.rows[0].subtag_id) {
+                // no canonical, but yes tag exists
+                return res.status(200).json({ canonical: null, tagInfo: null, tagexists: true });
+            }
+        }
+        return res.status(200).json({ canonical: null, tagInfo: null, tagexists: false });
+    } catch (err) {
+        res.status(500).json({ error: "Failed to fetch tag info. [Code: 2-298 TAGWEB_ERROR]" });
+    }
+
+
+});
+
+router.post("/newcanonical", authenticateToken, async (req, res) => {
+    try {
+        const { tag } = req.body;
+        if (req.user.owner) {
+            const result = await pool.query(
+                `INSERT INTO 
+                canonicaltags (name, nsfw, sensitive, type)
+                VALUES ($1, false, false, 'general')
+                RETURNING id, name`, 
+                [tag]
+            );
+            const tagResults = await pool.query(
+                `WITH new_tag AS (
+                    INSERT INTO tags (name)
+                    VALUES ($1)
+                    ON CONFLICT (name) DO NOTHING
+                    RETURNING id
+                )
+                SELECT id FROM new_tag
+                UNION
+                SELECT id FROM tags WHERE name = $1`,
+                [tag]
+            );
+            await pool.query(
+                `UPDATE 
+                    tags
+                SET
+                    canon_id = $2
+                WHERE
+                    id = $1`,
+                [tagResults.rows[0].id, result.rows[0].id]
+            )
+            return res.status(201).json({ id: result.rows[0].id, name: result.rows[0].name });
+        }
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({ error: "Failed to create canonical tag. [Code: 2-298 TAGWEB_ERROR]"});
+    }
+});
+
 
 
 module.exports = router;

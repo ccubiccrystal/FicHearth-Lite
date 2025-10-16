@@ -498,6 +498,19 @@ input::placeholder {
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
 }
 
+.adminchoices {
+  z-index: 20;
+  background-color: var(--darkmain);
+  margin-top: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 2vw;
+  width: 60vw;
+  border-radius: 1.5vw;
+  position: relative;
+  padding: 2vw 1vw 1vw 1vw;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+}
+
 .editbox {
   z-index: 20;
   background-color: var(--darkmain);
@@ -539,6 +552,43 @@ input::placeholder {
 }
 
 .editsubmit:hover {
+  background-color: var(--buttonhover);
+}
+
+.back {
+  background-color: var(--main);
+  color: var(--text);
+  font-size: 1vw;
+  border: none;
+  border-radius: 0.5vw;
+  height: 2vw;
+  width: 5vw;
+  position: absolute;
+  bottom: 0.5vw;
+  left: 1vw;
+  cursor: pointer;
+}
+
+.back:hover {
+  background-color: var(--lightmain);
+}
+
+.options {
+  background-color: var(--button);
+  color: var(--buttontext);
+  font-size: 1vw;
+  border: none;
+  border-radius: 0.5vw;
+  margin-bottom: 1vw;
+  height: 2vw;
+  width: auto;
+  position: relative;
+  bottom: 0.5vw;
+  left: 1vw;
+  cursor: pointer;
+}
+
+.options:hover {
   background-color: var(--buttonhover);
 }
 
@@ -1811,6 +1861,46 @@ input::placeholder {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+  }
+
+  .followbutt {
+    position: relative;
+    left: 17vw;
+    top: -6vw;
+    font-size: 3vw;
+    padding: 0.3vw;
+    width: 15vw;
+    height: 5vw;
+    border-radius: 3vw;
+    bottom: -0.8vw;
+  }
+  
+  .ufollowbutt {
+    position: relative;
+    left: 17vw;
+    top: -6vw;
+    font-size: 4vw;
+    padding: 0.3vw;
+    width: 20vw;
+    height: 5vw;
+    border-radius: 3vw;
+    bottom: -0.8vw;
+  }
+
+  .sb-box .followbutt {
+    left: -5vw;
+    top: 10vw;
+    width: 25vw;
+    height: 8vw;
+    font-size: 4.5vw;
+  }
+
+  .sb-box .ufollowbutt {
+    left: -5vw;
+    top: 10vw;
+    width: 25vw;
+    height: 8vw;
+    font-size: 4.5vw;
   }
 
 
